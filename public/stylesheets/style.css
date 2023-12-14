@@ -110,7 +110,7 @@ table td {
 
 #show-page {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: .3fr 2fr;
   grid-gap: 1rem;
 }
 
