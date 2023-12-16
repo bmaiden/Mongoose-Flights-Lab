@@ -18,8 +18,7 @@ module.exports = {
   }
 
   function newFlight(req, res) {
-    // We'll want to be able to render an  
-    // errorMsg if the create action fails
+    // We'll want to be able to render an errorMsg if the create action fails
     res.render('flights/new', { title: 'Add Flight', errorMsg: '' });
   }
 
