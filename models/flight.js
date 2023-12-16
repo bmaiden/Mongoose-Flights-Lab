@@ -36,8 +36,8 @@ const flightSchema = new Schema({
         default: function() {
             new Date(new Date().setFullYear(new Date().getFullYear() + 1));
         },
-        destinations: [destinationSchema]
-    }
+    },
+    destinations: [destinationSchema]
 }, { 
     timestamps: true
 });
