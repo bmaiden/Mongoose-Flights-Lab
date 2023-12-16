@@ -32,15 +32,15 @@
     <table>
       <thead>
         <tr>
-          <th>Arrival Date</th>
           <th>Airport</th>
+          <th>Arrival Date</th>
         </tr>
       </thead>
       <tbody>
         <% flight.destinations.forEach(function(d) { %>
           <tr>
             <!-- .toLocaleDateString() provides a more friendly date format -->
-            <td><%= d.createdAt.toLocaleDateString() %></td>            
+            <!-- <td> <%= d.createdAt.toLocaleDateString() %></td>             -->
             <td><%= d.airport %></td>
             <td><%= d.arrival %></td>
           </tr>
