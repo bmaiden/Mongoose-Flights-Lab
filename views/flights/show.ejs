@@ -28,4 +28,27 @@
     <button type="submit">Add Destination</button>
   </form>
 
+  <% if (flight.destinations.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Arrival Date</th>
+          <th>Airport</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% flight.destinations.forEach(function(d) { %>
+          <tr>
+            <!-- .toLocaleDateString() provides a more friendly date format -->
+            <td><%= d.createdAt.toLocaleDateString() %></td>            
+            <td><%= d.airport %></td>
+            <td><%= d.arrival %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Destinations Added Yet</h5>
+  <% } %>
+
   <%- include('../partials/footer') %>
