@@ -34,9 +34,10 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        default: function() {
-            new Date(new Date().setFullYear(new Date().getFullYear() + 1));
-        },
+        default: Date.now() + 365*24*60*60000
+        // default: function() {
+            // new Date(new Date().setFullYear(new Date().getFullYear() + 1));
+        // },
     },
     destinations: [destinationSchema]
 }, { 
